@@ -1,11 +1,27 @@
 #include <stdio.h>
-#include "all.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+#include "part/map.c"
+
+#define ia(x) ((int[]){x})
+
+void* int_dup(void *x) {
+   int* tmp = malloc(sizeof(int));
+   *tmp = *(int*)x;
+   return tmp;
+}
 
 int main() {
-   printf("Hello, World!\n");
+   Map *map = Map_create(int_dup, free);
 
-   int c = add(1, 2);
-   printf("1 + 2 = %d\n", c);
+   Map_set(map, 12, ia(1));
+   Map_set(map, 43, ia(3));
+   Map_set(map, 123, ia(4));
+
+   Map_set(map, 12, ia(2));
+
+   printf("%d\n", *(int*)Map_get(map, 12)); // 3
 
    return 0;
 }

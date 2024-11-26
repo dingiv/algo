@@ -1,4 +1,14 @@
 {
    "cmake.sourceDirectory": "D:/document/codes/algo/c",
-   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+   "files.associations": {
+      "*.json5": "jsonc",
+      ".env.development": "properties",
+      ".env.production": "properties",
+      ".env": "properties",
+      "*.tw.css": "tailwindcss",
+      "*.config": "jsonc",
+      "*.tw.scss": "tailwindcss",
+      "utils.h": "c"
+   }
 }

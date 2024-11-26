@@ -8,4 +8,5 @@ set(CMAKE_C_STANDARD 11)
 
 # 添加可执行文件
 aux_source_directory(./impl SOURCE_FILES)
-add_executable(MyProject main.c ${SOURCE_FILES})
+add_executable(main main.c ${SOURCE_FILES})
+target_include_directories(main PRIVATE ./include)
